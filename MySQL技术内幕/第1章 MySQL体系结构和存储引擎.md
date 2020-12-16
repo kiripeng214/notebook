@@ -31,9 +31,17 @@ InnoDB存储引擎支持事务，目标设计适用于联机交易（OLTP）场�
 
 
 InnoDB通过使用多版本并发控制（MVCC）来获得高并发性，且实现SQL标准的**4种隔离级别**
+> 为了避免幻读，使用了next-key locking的策略来避免幻读（phantom）现象的产生
 - 读未提交（read-uncommitted）
 - 不可重复读（read-committed）
 - 可重复读（repeatable-read）**MySQL默认的事务格林**
 - 串行化（serializable）
 
+InnoDB以下高性能和高可用的功能：
+- 插入缓冲（insert buffer）
+- 二次写（double write）
+- 自适应哈希索引（adaptive hash index）
+- 预读（read ahead）
 
+> 对于每张表数据的存储来说，InnoDB会根据聚集（clustered）索引，按照这个索引的顺序存放。
+> （没有指定聚集主键，就默认一个六子节ROWID）
