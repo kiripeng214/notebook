@@ -29,3 +29,11 @@ InnoDB存储引擎支持事务，目标设计适用于联机交易（OLTP）场�
 - 外键（一般不用）
 - 默认读取操作不会产生锁（类似于Oracle的非锁定读）
 
+
+InnoDB通过使用多版本并发控制（MVCC）来获得高并发性，且实现SQL标准的**4种隔离级别**
+- 读未提交（read-uncommitted）
+- 不可重复读（read-committed）
+- 可重复读（repeatable-read）**MySQL默认的事务格林**
+- 串行化（serializable）
+
+
