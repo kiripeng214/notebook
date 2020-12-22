@@ -68,3 +68,8 @@ NDB引擎和Oracle的RAC集群
 
 ### 1.3.6 Federated存储引擎
 > Federated存储引擎（只支持MySQL数据库表）不存储数据，只想远程MySQL数据库服务器上的表。类似于SQL Server的链接服务器和Oracle的透明网关
+
+
+## 1.4 各存储引擎之间的比较
+
+![Image text](../img/图1-2.png)
